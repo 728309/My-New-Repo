@@ -4,19 +4,13 @@
 
 h1.header {
     font-weight: lighter;
-    text-align: center;
 }
+
 p {
     width: 250px;
     height: 250px;
-    text-align: center;
 }
 
 h2 {
     font-weight: bold;
-    text-align: center;
-}
-
-.copyright {
-    text-align: center;
 }
