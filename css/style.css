@@ -1,16 +1,134 @@
-.copyright {
-    color: black;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
-h1.header {
-    font-weight: lighter;
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
 }
 
-p {
-    width: 250px;
-    height: 250px;
+header h1 {
+    font-size: 3rem;
 }
 
-h2 {
+header h1 span {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.r { color: plum; }
+.hythem { color: white }
+.r2 { color: greenyellow;}
+.over { color: white;}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Introduction Section */
+.intro {
+    background-color: black;
+    text-align: center;
+    padding: 50px;
+    border: 2px solid white;
+    margin: 20px auto;
+    width: 70%;
+    font-size: 1.1rem;
+}
+
+/* Choice Section */
+.choices {
+    text-align: center;
+    padding: 30px;
+}
+
+a.button {
+    margin: 10px;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.button {
+    display: inline-block; /* Make it block-level for clickable area */
+    width: 200px; /* Fixed width */
+    padding: 40px; /* Space inside the button */
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.house { background-color: red; }
+.afrobeat { background-color: yellow; color: black; }
+.techno { background-color: green; }
+.coming-soon { background-color: grey; }
+
+/* Hover Effects */
+.button:hover {
+    opacity: 0.8; /* Slightly fade the button on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+ 
+.beginning-banner {
+    position: relative;
+    width: 100vw; /* 100% of the viewport width */
+    height: 200px; /* Adjust the height of the banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    z-index: 1; /* Keeps the content above the background */
+    overflow: hidden; /* Ensures no overflow on the sides */
+}
+
+.beginning-banner::before {
+    content: "welcome animation";
+    background-image: url('C:\Users\jegyv\OneDrive - Hogeschool Inholland\Hogeschool Inholland\1 Year\Web MarkUp\Github Info\My-New-Repo\img\cCf7T.gif'); /* Use the path to your GIF */
+    background-size: cover; /* Ensures the GIF stretches and covers the whole banner */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Full height of the genre banner */
+    z-index: -1; /* Keeps the GIF behind the content */
+    opacity: 0.8; /* Optional: adds transparency to the GIF */
+}
+
+.beginning-banner h2 {
+    position: relative; /* Keeps the text above the background */
+    font-size: 2.5rem; /* Adjust the font size */
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background to increase text contrast */
+    padding: 10px 20px;
+    letter-spacing: 3px;
 }
