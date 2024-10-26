@@ -1,4 +1,5 @@
-/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -7,128 +8,365 @@ body {
     padding: 0;
 }
 
-/* Header Styles */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #000;
+    animation: fadeIn 1s ease-in; /* Apply fade-in effect */
 }
 
-header h1 {
-    font-size: 3rem;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-header h1 span {
-    display: inline-block;
-    padding: 0 5px;
-}
-
-.r { color: plum; }
-.hythem { color: white }
-.r2 { color: greenyellow;}
-.over { color: white;}
-
-nav {
-    margin-top: 20px;
-}
-
-nav a {
+nav ul li {
     margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+a[href="Home.html"]:hover {
+    background-color: #3AA4A4; 
+}
+
+a[href="House.html"]:hover {
+    background-color: #FF0000; 
+}
+
+a[href="#afrobeat"]:hover {
+    background-color: #FFE100; 
+}
+
+a[href="#techno"]:hover {
+    background-color: #00EA23; 
+}
+
+a[href="#contact"]:hover {
+    background-color: #B966AE; 
+}
+
+main {
+    text-align: center;
+    color: white; 
+    padding: 20px;
+    animation: fadeIn 1s ease-in; /* Apply fade-in effect */
+}
+
+h2 {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+    margin: 20px 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.GenreButtons {
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.HouseButton,
+.AfrobeatButton,
+.TechnoButton {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Introduction Section */
-.intro {
-    background-color: black;
-    text-align: center;
-    padding: 50px;
-    border: 2px solid white;
-    margin: 20px auto;
-    width: 70%;
-    font-size: 1.1rem;
-}
-
-/* Choice Section */
-.choices {
-    text-align: center;
-    padding: 30px;
-}
-
-a.button {
-    margin: 10px;
-    text-decoration: none; /* Remove underline from links */
-}
-
-.button {
-    display: inline-block; /* Make it block-level for clickable area */
-    width: 200px; /* Fixed width */
-    padding: 40px; /* Space inside the button */
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white; /* Text color */
-    border-radius: 10px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-
-.house { background-color: red; }
-.afrobeat { background-color: yellow; color: black; }
-.techno { background-color: green; }
-.coming-soon { background-color: grey; }
-
-/* Hover Effects */
-.button:hover {
-    opacity: 0.8; /* Slightly fade the button on hover */
-}
-
-/* Footer */
-footer {
-    text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
-}
- 
-.beginning-banner {
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    flex-grow: 1;
+    min-width: 150px;
     position: relative;
-    width: 100vw; /* 100% of the viewport width */
-    height: 200px; /* Adjust the height of the banner */
+}
+
+.HouseButton {
+    background-color: #410909; 
+}
+
+.AfrobeatButton {
+    background-color: #424110; 
+}
+
+.TechnoButton {
+    background-color: #20471e; 
+}
+
+.ComingSoonButton {
+    background-color: #333; 
+    background-image: url("../img/il_fullxfull.3134795312_j32j.webp");
+    color: rgb(62, 63, 70);
+    text-decoration: none;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    flex-grow: 0.5;
+    min-width: 150px;
+    position: relative;
+}
+
+.HouseButton:hover,
+.AfrobeatButton:hover,
+.TechnoButton:hover {
+    animation: pulse 1.5s infinite; /* Apply hover animation */
+}
+
+.genre-button:hover {
+    background-color: #555; 
+    transform: scale(1.05); 
+}
+
+.more-info {
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.more-info h3 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px 0;
+    position: relative;
+}
+
+.more-info::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    margin: 0 auto 10px auto; 
+}
+
+.intro {
+    background-image: url("../img/tumblr_o1b5ekTr5W1s9w3qso1_500.gif");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 60px 20px; 
+    text-align: center;
+    color: white; 
+    position: relative;
+    height: 300px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    flex-direction: column;
+}
+
+.intro p {
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
-    font-family: 'Arial', sans-serif;
-    z-index: 1; /* Keeps the content above the background */
-    overflow: hidden; /* Ensures no overflow on the sides */
-}
-
-.beginning-banner::before {
-    content: "welcome animation";
-    background-image: url('C:\Users\jegyv\OneDrive - Hogeschool Inholland\Hogeschool Inholland\1 Year\Web MarkUp\Github Info\My-New-Repo\img\cCf7T.gif'); /* Use the path to your GIF */
-    background-size: cover; /* Ensures the GIF stretches and covers the whole banner */
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100%; /* Full height of the genre banner */
-    z-index: -1; /* Keeps the GIF behind the content */
-    opacity: 0.8; /* Optional: adds transparency to the GIF */
-}
-
-.beginning-banner h2 {
-    position: relative; /* Keeps the text above the background */
-    font-size: 2.5rem; /* Adjust the font size */
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional background to increase text contrast */
+    letter-spacing: 8px;
+    font-size: 30px;
+    max-width: 800px; 
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 10px 20px;
-    letter-spacing: 3px;
+    border-radius: 5px;
+}
+
+.Bars {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.Bars::after {
+    content: '';
+    display: block;
+    width: 100%; 
+    height: 10px;
+    background-color: white; 
+    margin: 10px auto 0 auto; 
+}
+
+.Bars::before {
+    content: '';
+    display: block;
+    width: 100%; 
+    height: 10px;
+    background-color: white; 
+    margin: 0px 100px 10px auto; 
+}
+
+@media (max-width: 768px){
+    .GenreButtons{
+        display: block;
+        width: 100%;
+    }
+
+    .HouseButton,
+    .AfrobeatButton,
+    .TechnoButton,
+    .ComingSoonButton {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .nav ul{
+        display: block;
+    }
+
+    .intro p{
+        display: block;
+        font-size: 25px;
+        margin: 10px 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    h2{
+        display: block;
+        font-size: 28px;
+        margin: 10px 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 24px;
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(31, 22, 22);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-family: 'Jersey 25', sans-serif;
+}
+
+article p {
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 80px;
+    margin-bottom: 5px; /* Space between logo and site name */
+}
+
+.site-title {
+    font-size: 3em; 
+    font-weight: bold;
+    text-align: center;
+    color: white; 
+    margin: 0;
+    letter-spacing: 2px; 
+    padding-top: 10px;
+}
+
+.styled-R {
+    color: greenyellow;
+    font-weight: bold;
+}
+
+.styled-R:last-child {
+    color: purple;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #999; 
+    background-color: #111; 
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #ccc;
+}
+
+footer p::before, footer p::after {
+    content: " ";
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    border-top: 1px solid #999; 
+}
+
+figcaption {
+    color: black;
 }
