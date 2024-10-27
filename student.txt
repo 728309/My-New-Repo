@@ -1,5 +1,5 @@
 Student name: J.D Van Doorn
-Student number: 
-Student class: 
+Student number: 728309
+Student class: HAIT24FT1B
 GitHub Repository: 
 GitHub Pages URL: 
