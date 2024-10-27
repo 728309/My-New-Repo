@@ -45,7 +45,7 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-a[href="Home.html"]:hover {
+a[href="index.html"]:hover {
     background-color: #3AA4A4; 
 }
 
@@ -61,7 +61,7 @@ a[href="Techno.html"]:hover {
     background-color: #00EA23; 
 }
 
-a[href="#contact"]:hover {
+a[href="Contact.html"]:hover {
     background-color: #B966AE; 
 }
 
@@ -249,12 +249,12 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgb(31, 22, 22);
+    background-color: rgb(0, 0, 0);
     padding: 10px;
-    text-align: center;
+    text-align:left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items:flex-start;
     gap: 20px;
 }
 
@@ -477,3 +477,11 @@ figcaption {
 .contact-button:hover {
     background-color: rgb(10, 49, 12);
 }
+
+.intro p::first-letter {
+    font-size: 2em;
+    color: green;
+}
+
+.events ul li:nth-child(odd) { background-color: #222; }
+.events ul li:nth-child(even) { background-color: #333; }

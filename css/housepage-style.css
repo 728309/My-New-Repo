@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
-/*Styling it self*/
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -10,6 +10,7 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     text-align: center;
     padding: 20px;
@@ -22,6 +23,7 @@ header .logo {
     height: auto;
 }
 
+/* Navigation */
 nav ul {
     display: flex;
     gap: 30px;
@@ -62,7 +64,6 @@ h2 {
     background-color: black;
 }
 
-/* Animations */
 @keyframes pulse {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.1); opacity: 0.8; }
@@ -71,18 +72,6 @@ h2 {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.more-info {
-    margin-top: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.more-info h3 {
-    font-size: 2em;
-    padding: 10px 0;
 }
 
 .intro {
@@ -107,25 +96,84 @@ h2 {
     border-radius: 5px;
 }
 
-.Bars {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.Bars::after, .Bars::before {
-    content: '';
-    display: block;
-    height: 10px;
-    background-color: white;
-    margin: 0 auto;
+.gallery figure {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border: 2px solid red;
 }
 
-/* Footer */
+.gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gallery figcaption {
+    margin-top: 5px;
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.timetable-heading{
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 3px solid red;
+}
+
+.timetable h3 {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.timetable-table {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.timetable {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.social-media {
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+    font-family: 'Jersey 25', sans-serif;
+}
+
+.social-media a:hover {
+    color: red;
+}
+
 footer {
     text-align: center;
     font-size: 0.9em;
-    color: #ddd; /* Improved contrast */
+    color: #ddd;
     background-color: #111;
     padding: 10px 0;
     position: fixed;
@@ -133,10 +181,9 @@ footer {
     width: 100%;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
-    .intro p { font-size: 5vw; }
-    h2 { font-size: 7vw; }
+    .intro p { font-size: 4vw; }
+    h2 { font-size: 6vw; }
 
     nav ul {
         flex-direction: column;
@@ -149,7 +196,7 @@ footer {
     }
     
     .more-info,
-    .events,
+    .timetable,
     .contact-section {
         padding: 10px;
         width: 90%;
@@ -157,12 +204,6 @@ footer {
 }
 
 img { max-width: 100%; height: auto; }
-
-.navlist {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
 
 .site-title {
     font-size: 3em;
@@ -181,40 +222,6 @@ img { max-width: 100%; height: auto; }
     color: rgb(255, 9, 9);
 }
 
-.events {
-    max-width: 300px;
-    margin: 0 auto;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border: 3px solid red;
-}
-
-.events ul li:nth-child(odd) { background-color: #222; }
-.events ul li:nth-child(even) { background-color: #333; }
-
-.events h3 {
-    color: red;
-    font-size: 1.2rem;
-    margin-top: 0;
-}
-
-.events ul {
-    list-style: none;
-    padding: 0;
-}
-
-.events ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.events ul li a:hover {
-    color: red;
-    text-decoration: underline;
-}
-
-/*clubs*/
 .clubs {
     display: flex;
     justify-content: space-around;
@@ -238,6 +245,7 @@ img { max-width: 100%; height: auto; }
     font-weight: bold;
 }
 
+/* Contact Section */
 .contact-section {
     background-color: #222;
     padding: 20px;
@@ -256,9 +264,4 @@ img { max-width: 100%; height: auto; }
 
 .contact-button:hover {
     background-color: darkred;
-}
-
-.intro p::first-letter {
-    font-size: 2em;
-    color: red;
 }

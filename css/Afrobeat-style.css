@@ -10,34 +10,26 @@ body {
     padding: 0;
 }
 
+
 header {
     text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    animation: fadeIn 1s ease-in; 
-}
-
-header .logo {
-    width: 80px;
-    height: auto;
+    padding: 0;
+    background-color: #000;
+    animation: fadeIn 1s ease-in;
 }
 
 nav ul {
     display: flex;
-    gap: 15px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
 nav ul li a {
     color: white;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 1.8em;
     text-decoration: none;
     padding: 10px 15px;
     font-family: 'Jersey 25', sans-serif;
@@ -45,25 +37,16 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-a[href="Home.html"]:hover {
-    background-color: #3AA4A4; 
+nav ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
 
-a[href="House.html"]:hover {
-    background-color: #FF0000; 
-}
-
-a[href="Afrobeat.html"]:hover {
-    background-color: #FFE100; 
-}
-
-a[href="Techno.html"]:hover {
-    background-color: #00EA23; 
-}
-
-a[href="#contact"]:hover {
-    background-color: #B966AE; 
-}
+a[href="index.html"]:hover { background-color: #3AA4A4; }
+a[href="House.html"]:hover { background-color: #FF0000; }
+a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
+a[href="Techno.html"]:hover { background-color: #00EA23; }
+a[href="Contact.html"]:hover { background-color: #B966AE; }
 
 main {
     text-align: center;
@@ -162,30 +145,6 @@ h2 {
     display: inline-block;
 }
 
-.Bars {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.Bars::after {
-    content: '';
-    display: block;
-    width: 100%; 
-    height: 10px;
-    background-color: white; 
-    margin: 10px auto 0 auto; 
-}
-
-.Bars::before {
-    content: '';
-    display: block;
-    width: 100%; 
-    height: 10px;
-    background-color: white; 
-    margin: 0px 100px 10px auto; 
-}
-
 @media (max-width: 768px){
 
     .intro p{
@@ -212,16 +171,7 @@ h2 {
         padding: 12px;
     }
 
-    .nav-list {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-        position: absolute; 
-        top: 60px; 
-        left: 0;
-        background-color: white; 
-        border: 1px solid #ccc; 
-    }
+    ..navlist { display: flex; list-style: none; padding: 0; }
 
     .nav-list li {
         margin: 10px 0; 
@@ -249,12 +199,12 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgb(31, 22, 22);
+    background-color: rgb(0, 0, 0);
     padding: 10px;
-    text-align: center;
+    text-align: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items:flex-start;
     gap: 20px;
 }
 
@@ -297,12 +247,6 @@ article p {
     font-size: 25px;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px;
-}
 
 .logo {
     max-width: 80px;
@@ -357,10 +301,6 @@ footer p::before, footer p::after {
 
 figcaption {
     color: black;
-}
-
-.container {
-    display: flex; 
 }
 
 @supports (display: grid) {
@@ -420,9 +360,8 @@ figcaption {
     text-decoration: none;
 }
 
-.events-banner ul li {
-    margin-bottom: 8px;
-}
+.events ul li:nth-child(odd) { background-color: #222; }
+.events ul li:nth-child(even) { background-color: #333; }
 
 .events ul li a:hover {
     color: yellow;
@@ -449,8 +388,7 @@ figcaption {
 
 .clubs figcaption {
     margin-top: 5px;
-    color: rgb(255, 255
-    , 0);
+    color: rgb(255, 255, 0);
     text-align: center;
     font-weight: bold;
 }
@@ -477,4 +415,9 @@ figcaption {
 
 .contact-button:hover {
     background-color: rgb(146, 156, 2);
+}
+
+.intro p::first-letter {
+    font-size: 2em;
+    color: yellow;
 }

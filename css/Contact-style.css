@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+    background-color: #000;
+    animation: fadeIn 1s ease-in;
+    position: relative; 
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    letter-spacing: 0.1em; /* Added letter spacing */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+a[href="index.html"]:hover { background-color: #3AA4A4; }
+a[href="House.html"]:hover { background-color: #FF0000; }
+a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
+a[href="Techno.html"]:hover { background-color: #00EA23; }
+a[href="Contact.html"]:hover { background-color: #B966AE; }
+
+main {
+    text-align: center;
+    color: white;
+    padding: 1.25rem;
+    animation: fadeIn 1s ease-in;
+}
+
+h2, .site-title {
+    font-family: 'Jersey 20', sans-serif;
+    font-weight: 400;
+    font-size: 2.5em;
+    margin: 1em 0;
+    letter-spacing: 0.05em; 
+    word-spacing: 0.1em; 
+}
+
+.intro {
+    background-image: url("../img/tumblr_o1b5ekTr5W1s9w3qso1_500.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3.75rem 1.25rem;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro p {
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 1.8em;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    line-height: 1.6; 
+}
+
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+    background-color: #111;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .intro p { font-size: 4vw; }
+    h2 { font-size: 6vw; }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(31, 22, 22);
+    }
+
+    nav ul li a { font-size: 1.4em; padding: 0.75em; }
+}
+
+form {
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc; 
+    max-width: 500px;
+    margin: 2rem auto;
+    position: relative; 
+}
+
+label {
+    display: block;
+    margin: 0.5em 0 0.25em;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.625rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+header .logo {
+    width: 80px;
+    height: auto;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.styled-R { color: greenyellow; font-weight: bold; }
+.styled-R:last-child { color: purple; }
+
+.site-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}

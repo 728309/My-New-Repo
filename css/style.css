@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
-/* General Styling */
+/*evrything in one*/
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -9,7 +9,6 @@ body {
     padding: 0;
 }
 
-/* Header Styling */
 header {
     text-align: center;
     padding: 0;
@@ -17,7 +16,6 @@ header {
     animation: fadeIn 1s ease-in;
 }
 
-/* Navigation Styling */
 nav ul {
     display: flex;
     gap: 30px;
@@ -42,13 +40,12 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-a[href="Home.html"]:hover { background-color: #3AA4A4; }
+a[href="index.html"]:hover { background-color: #3AA4A4; }
 a[href="House.html"]:hover { background-color: #FF0000; }
 a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
 a[href="Techno.html"]:hover { background-color: #00EA23; }
-a[href="#contact"]:hover { background-color: #B966AE; }
+a[href="Contact.html"]:hover { background-color: #B966AE; }
 
-/* Main Content */
 main {
     text-align: center;
     color: white;
@@ -56,15 +53,14 @@ main {
     animation: fadeIn 1s ease-in;
 }
 
-/* Title and Heading Styling */
 h2 {
     font-family: 'Jersey 20', sans-serif;
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 20px 0;
 }
 
-/* Animations */
+/*Animations*/
 @keyframes pulse {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.1); opacity: 0.8; }
@@ -75,7 +71,7 @@ h2 {
     to { opacity: 1; }
 }
 
-/* Genre Button Styling */
+/*genre button*/
 .GenreButtons {
     display: flex;
     justify-content: center;
@@ -109,7 +105,6 @@ h2 {
     animation: pulse 1.5s infinite;
 }
 
-/* More Info Section */
 .more-info {
     margin-top: 30px;
     max-width: 800px;
@@ -119,7 +114,7 @@ h2 {
 }
 
 .more-info p {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 .more-info h3 {
@@ -127,7 +122,6 @@ h2 {
     padding: 10px 0;
 }
 
-/* Intro Section */
 .intro {
     background-image: url("../img/tumblr_o1b5ekTr5W1s9w3qso1_500.gif");
     background-size: cover;
@@ -144,14 +138,13 @@ h2 {
 
 .intro p {
     font-family: 'Jersey 25', sans-serif;
-    font-size: 1.25em;
+    font-size: 2em;
     max-width: 800px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
 }
 
-/* Bar Decoration */
 .Bars {
     position: relative;
     display: inline-block;
@@ -165,7 +158,6 @@ h2 {
     background-color: white;
 }
 
-/* Footer Styling */
 footer {
     text-align: center;
     font-size: 0.9em;
@@ -177,7 +169,7 @@ footer {
     width: 100%;
 }
 
-/* Responsive Styling */
+/*phone version*/
 @media (max-width: 768px) {
     .GenreButtons {
         flex-direction: column;
@@ -190,8 +182,8 @@ footer {
         padding: 15px;
     }
 
-    .intro p { font-size: 4vw; }
-    h2 { font-size: 6vw; }
+    .intro p { font-size: 6vw; }
+    h2 { font-size: 7vw; }
     
     nav ul {
         flex-direction: column;
@@ -218,3 +210,18 @@ img { max-width: 100%; height: auto; }
 }
 .styled-R { color: greenyellow; font-weight: bold; }
 .styled-R:last-child { color: purple; }
+
+header .logo {
+    width: 80px;
+    height: auto;
+  }
+
+  .logo {
+    max-width: 80px;
+    margin-bottom: 5px;
+  }
+
+  .intro p::first-letter {
+    font-size: 2em;
+    color: pink;
+}
