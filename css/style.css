@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
+/*th whole website is here*/
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -10,14 +11,14 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 0px;
     background-color: #000;
-    animation: fadeIn 1s ease-in; /* Apply fade-in effect */
+    animation: fadeIn 1s ease-in; 
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    gap: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -32,10 +33,10 @@ nav ul li a {
     text-transform: uppercase;
     font-size: 30px;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     font-family: 'Jersey 25', sans-serif;
     font-weight: bold;
-    font-style: normal;
+    transition: background-color 0.3s ease;
 }
 
 a[href="Home.html"]:hover {
@@ -245,7 +246,9 @@ h2 {
 
 @media (max-width: 768px){
     .GenreButtons{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
@@ -254,34 +257,66 @@ h2 {
     .TechnoButton,
     .ComingSoonButton {
         display: block;
-        width: 100%;
-        margin: 10px 0;
+        width: 90%;
+        margin: 10px auto;
         padding: 15px;
-    }
-
-    .nav ul{
-        display: block;
     }
 
     .intro p{
-        display: block;
-        font-size: 25px;
-        margin: 10px 0;
-        padding: 15px;
-        width: 100%;
+        font-size: 4vw;
     }
 
     h2{
-        display: block;
-        font-size: 28px;
+        font-size: 6vw;
         margin: 10px 0;
         padding: 15px;
         width: 100%;
     }
 
-    nav ul li a {
-        font-size: 24px;
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(31, 22, 22);
     }
+
+    nav ul li a {
+        font-size: 23px;
+        padding: 12px;
+    }
+
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+        background-color: white; 
+        border: 1px solid #ccc; 
+    }
+
+    .nav-list li {
+        margin: 10px 0; 
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+    .menu-icon {
+        display: flex; 
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-list {
+        display: flex; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 nav {
@@ -291,6 +326,33 @@ nav {
     background-color: rgb(31, 22, 22);
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navlist{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.menu-icon {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 3px;
 }
 
 nav a {
@@ -318,7 +380,7 @@ article p {
 
 .logo {
     max-width: 80px;
-    margin-bottom: 5px; /* Space between logo and site name */
+    margin-bottom: 5px; 
 }
 
 .site-title {
@@ -369,4 +431,52 @@ footer p::before, footer p::after {
 
 figcaption {
     color: black;
+}
+
+.container {
+    display: flex; 
+}
+
+@supports (display: grid) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    border-radius: 20px; 
+}
+
+.intro-House {
+    background-image: url("");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 60px 20px; 
+    text-align: center;
+    color: white; 
+    position: relative;
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-House p {
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 30px;
+    max-width: 800px; 
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 20px;
+    border-radius: 5px;
 }

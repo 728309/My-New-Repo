@@ -3,27 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rhythm Rover: Discover the best music venues in Amsterdam.">
     <title>Rhythm Rover</title>
-    <link rel="stylesheet" type= "text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/house-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
 </head>
- 
-<body>
-
+<body>  
     <header>
-        <img src="../My-New-Repo/img/Rhythm Rover Logo.png" alt="Logo" class="logo">
-        <h1 id="site-title">RHYTHM <span class="styled-R">R</span>OVER</h1>
-    <nav>
-        <ul>
-            <li><a href="Home.html">HOME</a></li>
-            <li><a href="House.html">HOUSE</a></li>
-            <li><a href="#afrobeat">AFROBEAT</a></li>
-            <li><a href="#techno">TECHNO</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
-</header>
+        <figure>
+            <img src="../My-New-Repo/img/Rhythm Rover Logo.png" alt="Rhythm Rover Logo" title="Rhythm Rover Logo" class="logo">
+            <figcaption>Rhythm Rover logo</figcaption>
+        </figure>
+        <h1 class="site-title"><span class="styled-R">R</span>HYTHM <span class="styled-R">R</span>OVER</h1>
+        <nav aria-label="Main Navigation">
+            <ul class="navlist">
+                <li><a href="Home.html" title="Home Page">HOME</a></li>
+                <li><a href="House.html" title="House Music">HOUSE</a></li>
+                <li><a href="#afrobeat" title="Afrobeat Section">AFROBEAT</a></li>
+                <li><a href="#techno" title="Techno Section">TECHNO</a></li>
+                <li><a href="#contact" title="Contact Us">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="intro" aria-labelledby="intro-heading">
+            <h2 id="intro-heading" class="visually-hidden">Introduction to House</h2>
+            <p>
+                Welcome to House, the pulse of your nightlife journey.
+                Here, you'll discover clubs that will fuel your passions, elevate your vibe, and set the stage for unforgettable nights.
+                Step inside and let your dreams move to the rhythm, where opportunity meets the dancefloor. 
+                This is where your journey begins – welcome to the world of House.
+            </p>
+        </section>
 
+        <section class="red-banner" aria-labelledby="clubs-heading">
+            <span></span>
+            <h2 id="clubs-heading">CLUBS</h2>
+            <span></span>
+        </section>
 
+        <section class="events" aria-labelledby="events-heading">
+            <h3 id="events-heading">Latest Events</h3>
+            <ul>
+                <li><a href="https://www.amsterdam-dance-event.nl/en/program/2024/omg-its-sunday-house-special/2611385/" target="_blank" rel="noopener noreferrer" title="Details for It's Sunday ADE">It's Sunday ADE</a></li>
+                <li><a href="https://www.amsterdam-dance-event.nl/en/program/2024/jonas-blue-friends/2445435/" target="_blank" rel="noopener noreferrer" title="Details for Jonas Blue ADE">Jonas Blue ADE</a></li>
+                <li><a href="https://www.amsterdam-dance-event.nl/en/program/2024/aura-ade/2512567/" target="_blank" rel="noopener noreferrer" title="Details for Aura ADE">Aura ADE</a></li>
+                <li><a href="https://www.amsterdam-dance-event.nl/en/program/2024/vault-sessions-ade-radion/2512544/" target="_blank" rel="noopener noreferrer" title="Details for Vault Session ADE">Vault Session ADE</a></li>
+            </ul>
+        </section>
+
+        <section class="clubs" aria-labelledby="clubs-heading">
+            <h2 class="visually-hidden" id="clubs-heading">Featured Clubs</h2>
+
+            
+            <a href="escape.html" aria-label="Escape Club Details">
+                <figure class="club" id="club1">
+                    <img src="../My-New-Repo/img/IMG_4904.png" alt="Escape Club" title="Escape Club">
+                    <figcaption>ESCAPE</figcaption>
+                </figure>
+            </a>
+            <figure class="club" id="club2">
+                <img src="../My-New-Repo/img/coming soon.png" alt="Coming Soon Club">
+                <figcaption>Coming Soon</figcaption>
+            </figure>
+        </section>
+    
+        <section class="contact-section">
+            <p>If your club isn’t featured on this website and you believe it deserves a spot, don’t hesitate to reach out.</p>
+            <a href="#contact-form" class="contact-button" title="Contact Us">CLICK ME</a>
+        </section>
+
+        <footer>
+            <p>&copy; Rhythm Rover 2024. All rights reserved.</p>
+        </footer>
+    </main>
 </body>
+</html>
