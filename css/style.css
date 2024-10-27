@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
-/*th whole website is here*/
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -9,29 +9,27 @@ body {
     padding: 0;
 }
 
+/* Header Styling */
 header {
     text-align: center;
-    padding: 0px;
+    padding: 0;
     background-color: #000;
-    animation: fadeIn 1s ease-in; 
+    animation: fadeIn 1s ease-in;
 }
 
+/* Navigation Styling */
 nav ul {
     display: flex;
-    gap: 15px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
 nav ul li a {
     color: white;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 1.8em;
     text-decoration: none;
     padding: 10px 15px;
     font-family: 'Jersey 25', sans-serif;
@@ -39,167 +37,105 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-a[href="Home.html"]:hover {
-    background-color: #3AA4A4; 
+nav ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
 
-a[href="House.html"]:hover {
-    background-color: #FF0000; 
-}
+a[href="Home.html"]:hover { background-color: #3AA4A4; }
+a[href="House.html"]:hover { background-color: #FF0000; }
+a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
+a[href="Techno.html"]:hover { background-color: #00EA23; }
+a[href="#contact"]:hover { background-color: #B966AE; }
 
-a[href="#afrobeat"]:hover {
-    background-color: #FFE100; 
-}
-
-a[href="#techno"]:hover {
-    background-color: #00EA23; 
-}
-
-a[href="#contact"]:hover {
-    background-color: #B966AE; 
-}
-
+/* Main Content */
 main {
     text-align: center;
-    color: white; 
+    color: white;
     padding: 20px;
-    animation: fadeIn 1s ease-in; /* Apply fade-in effect */
+    animation: fadeIn 1s ease-in;
 }
 
+/* Title and Heading Styling */
 h2 {
-    font-family: "Jersey 20", sans-serif;
+    font-family: 'Jersey 20', sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 90px;
+    font-size: 2.5em;
     margin: 20px 0;
 }
 
+/* Animations */
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
+/* Genre Button Styling */
 .GenreButtons {
-    display: block;
+    display: flex;
     justify-content: center;
-    margin: 20px auto;
     flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px auto;
 }
 
-.HouseButton,
-.AfrobeatButton,
-.TechnoButton {
+.GenreButtons a {
     color: white;
     text-decoration: none;
     padding: 20px;
-    margin: 0 10px;
     border-radius: 5px;
-    font-size: 40px;
+    font-size: 1.5em;
     font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
     transition: background-color 0.3s, transform 0.3s;
-    flex-grow: 1;
     min-width: 150px;
-    position: relative;
+    text-align: center;
 }
 
-.HouseButton {
-    background-color: #410909; 
-}
-
-.AfrobeatButton {
-    background-color: #424110; 
-}
-
-.TechnoButton {
-    background-color: #20471e; 
-}
-
+.HouseButton { background-color: #410909; }
+.AfrobeatButton { background-color: #424110; }
+.TechnoButton { background-color: #20471e; }
 .ComingSoonButton {
-    background-color: #333; 
+    background-color: #333;
     background-image: url("../img/il_fullxfull.3134795312_j32j.webp");
     color: rgb(62, 63, 70);
-    text-decoration: none;
-    padding: 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    font-size: 40px;
-    font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-    flex-grow: 0.5;
-    min-width: 150px;
-    position: relative;
 }
 
-.HouseButton:hover,
-.AfrobeatButton:hover,
-.TechnoButton:hover {
-    animation: pulse 1.5s infinite; /* Apply hover animation */
+.GenreButtons a:hover {
+    animation: pulse 1.5s infinite;
 }
 
-.genre-button:hover {
-    background-color: #555; 
-    transform: scale(1.05); 
-}
-
+/* More Info Section */
 .more-info {
     margin-top: 30px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+    font-family: 'Jersey 25', sans-serif;
+}
+
+.more-info p {
+    font-size: 1.25em;
 }
 
 .more-info h3 {
-    font-size: 25px;
-    color: white;
-    text-align: center;
     font-size: 2em;
     padding: 10px 0;
-    position: relative;
 }
 
-.more-info::before {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 2px;
-    background-color: rgb(0, 0, 0);
-    margin: 0 auto 10px auto; 
-}
-
+/* Intro Section */
 .intro {
     background-image: url("../img/tumblr_o1b5ekTr5W1s9w3qso1_500.gif");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    padding: 60px 20px; 
-    text-align: center;
-    color: white; 
-    position: relative;
-    height: 300px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    color: white;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,275 +144,77 @@ h2 {
 
 .intro p {
     font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 8px;
-    font-size: 30px;
-    max-width: 800px; 
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5); 
+    font-size: 1.25em;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 5px;
 }
 
+/* Bar Decoration */
 .Bars {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
 }
 
-.Bars::after {
+.Bars::after, .Bars::before {
     content: '';
     display: block;
-    width: 100%; 
     height: 10px;
-    background-color: white; 
-    margin: 10px auto 0 auto; 
+    background-color: white;
 }
 
-.Bars::before {
-    content: '';
-    display: block;
-    width: 100%; 
-    height: 10px;
-    background-color: white; 
-    margin: 0px 100px 10px auto; 
-}
-
-@media (max-width: 768px){
-    .GenreButtons{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .HouseButton,
-    .AfrobeatButton,
-    .TechnoButton,
-    .ComingSoonButton {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
-        padding: 15px;
-    }
-
-    .intro p{
-        font-size: 4vw;
-    }
-
-    h2{
-        font-size: 6vw;
-        margin: 10px 0;
-        padding: 15px;
-        width: 100%;
-    }
-
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: rgb(31, 22, 22);
-    }
-
-    nav ul li a {
-        font-size: 23px;
-        padding: 12px;
-    }
-
-    .nav-list {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-        position: absolute; 
-        top: 60px; 
-        left: 0;
-        background-color: white; 
-        border: 1px solid #ccc; 
-    }
-
-    .nav-list li {
-        margin: 10px 0; 
-    }
-
-    .menu-toggle {
-        display: none; 
-    }
-
-    .menu-icon {
-        display: flex; 
-    }
-
-    #menu-toggle:checked + .menu-icon + .nav-list {
-        display: flex; 
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgb(31, 22, 22);
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.navlist{
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.menu-icon {
-    display: none; 
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    height: 3px;
-    width: 25px;
-    background-color: black;
-    margin: 3px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    font-family: 'Jersey 25', sans-serif;
-}
-
-article p {
-    font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 5px;
-    font-size: 25px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.logo {
-    max-width: 80px;
-    margin-bottom: 5px; 
-}
-
-.site-title {
-    font-size: 3em; 
-    font-weight: bold;
-    text-align: center;
-    color: white; 
-    margin: 0;
-    letter-spacing: 2px; 
-    padding-top: 10px;
-}
-
-.styled-R {
-    color: greenyellow;
-    font-weight: bold;
-}
-
-.styled-R:last-child {
-    color: purple;
-}
-
+/* Footer Styling */
 footer {
     text-align: center;
     font-size: 0.9em;
-    color: #999; 
-    background-color: #111; 
+    color: #ccc;
+    background-color: #111;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-footer p {
-    margin: 0;
-    padding: 0;
-    letter-spacing: 1px;
-    font-weight: 300;
-    color: #ccc;
-}
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .GenreButtons {
+        flex-direction: column;
+        align-items: center;
+    }
 
-footer p::before, footer p::after {
-    content: " ";
-    display: inline-block;
-    margin: 0 5px;
-    width: 30px;
-    border-top: 1px solid #999; 
-}
+    .GenreButtons a {
+        width: 90%;
+        margin: 10px 0;
+        padding: 15px;
+    }
 
-figcaption {
-    color: black;
-}
+    .intro p { font-size: 4vw; }
+    h2 { font-size: 6vw; }
+    
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(31, 22, 22);
+    }
 
-.container {
-    display: flex; 
-}
-
-@supports (display: grid) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    nav ul li a { font-size: 1.4em; padding: 12px; }
+    
+    .more-info, .events, .contact-section {
+        padding: 10px;
+        width: 90%;
     }
 }
 
-.box {
-    width: 300px;
-    height: 300px;
-    background-color: red;
-    border-radius: 20px; 
+img { max-width: 100%; height: auto; }
+.navlist { display: flex; list-style: none; padding: 0; }
+.site-title {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
 }
-
-.intro-House {
-    background-image: url("");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    padding: 60px 20px; 
-    text-align: center;
-    color: white; 
-    position: relative;
-    height: 300px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.intro-House p {
-    font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 8px;
-    font-size: 30px;
-    max-width: 800px; 
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px 20px;
-    border-radius: 5px;
-}
+.styled-R { color: greenyellow; font-weight: bold; }
+.styled-R:last-child { color: purple; }

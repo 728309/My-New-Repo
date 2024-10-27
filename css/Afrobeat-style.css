@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
+
+/*th whole website is here*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    background-image: url("../img/Back ground pic 2.png");
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    animation: fadeIn 1s ease-in; 
+}
+
+header .logo {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a[href="Home.html"]:hover {
+    background-color: #3AA4A4; 
+}
+
+a[href="House.html"]:hover {
+    background-color: #FF0000; 
+}
+
+a[href="Afrobeat.html"]:hover {
+    background-color: #FFE100; 
+}
+
+a[href="Techno.html"]:hover {
+    background-color: #00EA23; 
+}
+
+a[href="#contact"]:hover {
+    background-color: #B966AE; 
+}
+
+main {
+    text-align: center;
+    color: white; 
+    padding: 20px;
+    animation: fadeIn 1s ease-in; /* Apply fade-in effect */
+}
+
+h2 {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin: 20px 0;
+    background-color: #000000;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.more-info {
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.more-info h3 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px 0;
+    position: relative;
+}
+
+.more-info::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    margin: 0 auto 10px auto; 
+}
+
+.intro {
+    background-image: url("../img/version\ 3.gif");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 60px 20px; 
+    text-align: center;
+    color: white; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.intro p {
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 30px;
+    max-width: 800px; 
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0); 
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.Bars {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.Bars::after {
+    content: '';
+    display: block;
+    width: 100%; 
+    height: 10px;
+    background-color: white; 
+    margin: 10px auto 0 auto; 
+}
+
+.Bars::before {
+    content: '';
+    display: block;
+    width: 100%; 
+    height: 10px;
+    background-color: white; 
+    margin: 0px 100px 10px auto; 
+}
+
+@media (max-width: 768px){
+
+    .intro p{
+        font-size: 4vw;
+    }
+
+    h2{
+        font-size: 6vw;
+        margin: 10px 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(31, 22, 22);
+    }
+
+    nav ul li a {
+        font-size: 23px;
+        padding: 12px;
+    }
+
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+        background-color: white; 
+        border: 1px solid #ccc; 
+    }
+
+    .nav-list li {
+        margin: 10px 0; 
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+
+    .menu-icon {
+        display: flex; 
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-list {
+        display: flex; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(31, 22, 22);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navlist{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.menu-icon {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-family: 'Jersey 25', sans-serif;
+}
+
+article p {
+    font-family: 'Jersey 25', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo {
+    max-width: 80px;
+    margin-bottom: 5px; 
+}
+
+.site-title {
+    font-size: 3em; 
+    font-weight: bold;
+    text-align: center;
+    color: white; 
+    margin: 0;
+    letter-spacing: 2px; 
+    padding-top: 10px;
+}
+
+.styled-R {
+    color: rgb(255, 255, 0);
+    font-weight: bold;
+}
+
+.styled-R:last-child {
+    color: rgb(255, 255, 0);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #999; 
+    background-color: #111; 
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #ccc;
+}
+
+footer p::before, footer p::after {
+    content: " ";
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    border-top: 1px solid #999; 
+}
+
+figcaption {
+    color: black;
+}
+
+.container {
+    display: flex; 
+}
+
+@supports (display: grid) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    border-radius: 20px; 
+}
+
+.red-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.red-banner span, .red-banner h2 {
+    background-color: yellow;
+    padding: 5px;
+}
+
+.red-banner h2 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.events {
+    max-width: 300px; 
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 3px solid yellow;
+}
+
+.events h3 {
+    color: yellow;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.events ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.events ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.events-banner ul li {
+    margin-bottom: 8px;
+}
+
+.events ul li a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+.clubs {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.clubs figure {
+    text-align: center;
+}
+
+.clubs img {
+    width: 150px;
+    height: 100px;
+    border: 3px solid yellow;
+}
+
+.clubs figcaption {
+    margin-top: 5px;
+    color: rgb(255, 255
+    , 0);
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact-section {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1rem;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: rgb(146, 156, 2);
+}
