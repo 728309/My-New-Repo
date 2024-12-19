@@ -1,5 +1,5 @@
 Student name: J.D Van Doorn
 Student number: 728309
 Student class: HAIT24FT1B
-GitHub Repository: 
-GitHub Pages URL: 
+GitHub Repository: https://github.com/728309/My-New-Repo
+GitHub Pages URL: https://728309.github.io/My-New-Repo/index.html
