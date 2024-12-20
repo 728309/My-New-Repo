@@ -6,7 +6,6 @@
     <meta name="description" content="Rhythm Rover: Discover the best music venues in Amsterdam.">
     <title>Rhythm Rover | House</title>
     <link rel="stylesheet" type="text/css" href="css/house-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -17,12 +16,13 @@
     <header>
         <figure>
             <img src="img/Rhythm Rover Logo.png" alt="Rhythm Rover Logo" title="Rhythm Rover Logo" class="logo">
+            <figcaption>Rhythm Rover Official Logo</figcaption>
         </figure>
         <h1 class="site-title"><span class="styled-R">R</span>HYTHM <span class="styled-R">R</span>OVER</h1>
         <nav aria-label="Main Navigation">
             <ul class="navlist">
                 <li><a href="index.html" title="Home Page">HOME</a></li>
-                <li><a href="House.html" title="House Music">HOUSE</a></li>
+                <li><a href="House.html" title="House Music" class="active">HOUSE</a></li>
                 <li><a href="Afrobeat.html" title="Afrobeat Section">AFROBEAT</a></li>
                 <li><a href="Techno.html" title="Techno Section">TECHNO</a></li>
                 <li><a href="Contact.html" title="Contact Us">CONTACT</a></li>
@@ -33,7 +33,7 @@
     <main>
         <!--Main section -->
         <section class="intro" aria-labelledby="intro-heading">
-            <h2 id="intro-heading" class="visually-hidden">INTRO</h2>
+            <h2 id="intro-heading">INTRO</h2>
             <p>
                 Welcome to House, the pulse of your nightlife journey.
                 Here, you'll discover clubs that will fuel your passions, elevate your vibe, and set the stage for unforgettable nights.
@@ -66,10 +66,12 @@
                     <figcaption>ESCAPE</figcaption>
                 </figure>
             </a>
-            <figure class="club" id="club2">
-                <img src="img/coming soon.png" alt="Coming Soon Club">
-                <figcaption>Coming Soon</figcaption>
-            </figure>
+            <a href="#ComingSoon" aria-label="Coming Soon Club">
+                <figure class="club" id="club2">
+                    <img src="img/coming soon.png" alt="Coming Soon Club" title="Coming Soon Club">
+                    <figcaption>Coming Soon</figcaption>
+                </figure>
+            </a>
         </section>
     
         <section class="contact-section">

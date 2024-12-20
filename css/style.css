@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
-/*evrything in one*/
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -27,7 +27,7 @@ nav ul {
 nav ul li a {
     color: white;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 1.8rem; /* Changed to relative units */
     text-decoration: none;
     padding: 10px 15px;
     font-family: 'Jersey 25', sans-serif;
@@ -35,17 +35,19 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     background-color: #555;
     transform: scale(1.05);
 }
 
-a[href="index.html"]:hover { background-color: #3AA4A4; }
-a[href="House.html"]:hover { background-color: #FF0000; }
-a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
-a[href="Techno.html"]:hover { background-color: #00EA23; }
-a[href="Contact.html"]:hover { background-color: #B966AE; }
+a[href="index.html"]:hover, a[href="index.html"]:focus { background-color: #3AA4A4; }
+a[href="House.html"]:hover, a[href="House.html"]:focus { background-color: #FF0000; }
+a[href="Afrobeat.html"]:hover, a[href="Afrobeat.html"]:focus { background-color: #FFE100; }
+a[href="Techno.html"]:hover, a[href="Techno.html"]:focus { background-color: #00EA23; }
+a[href="Contact.html"]:hover, a[href="Contact.html"]:focus { background-color: #B966AE; }
 
+/* Main Content */
 main {
     text-align: center;
     color: white;
@@ -56,36 +58,25 @@ main {
 h2 {
     font-family: 'Jersey 20', sans-serif;
     font-weight: 400;
-    font-size: 3em;
+    font-size: 3rem; /* Changed to relative units */
     margin: 20px 0;
 }
 
-/*Animations*/
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/*genre button*/
+/* Genre Buttons */
 .GenreButtons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 1rem; /* Replaced fixed px with rem */
     margin: 20px auto;
 }
 
 .GenreButtons a {
     color: white;
     text-decoration: none;
-    padding: 20px;
+    padding: 1.5rem; /* Replaced px with rem */
     border-radius: 5px;
-    font-size: 1.5em;
+    font-size: 1.5rem; /* Replaced px with rem */
     font-family: 'Jersey 25', sans-serif;
     transition: background-color 0.3s, transform 0.3s;
     min-width: 150px;
@@ -105,71 +96,7 @@ h2 {
     animation: pulse 1.5s infinite;
 }
 
-.more-info {
-    margin-top: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Jersey 25', sans-serif;
-}
-
-.more-info p {
-    font-size: 1.5em;
-}
-
-.more-info h3 {
-    font-size: 2em;
-    padding: 10px 0;
-}
-
-.intro {
-    background-image: url("../img/tumblr_o1b5ekTr5W1s9w3qso1_500.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 60px 20px;
-    color: white;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.intro p {
-    font-family: 'Jersey 25', sans-serif;
-    font-size: 2em;
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.Bars {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.Bars::after, .Bars::before {
-    content: '';
-    display: block;
-    height: 10px;
-    background-color: white;
-}
-
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #ccc;
-    background-color: #111;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/*phone version*/
+/* Responsive Design */
 @media (max-width: 768px) {
     .GenreButtons {
         flex-direction: column;
@@ -179,49 +106,42 @@ footer {
     .GenreButtons a {
         width: 90%;
         margin: 10px 0;
-        padding: 15px;
+        padding: 1rem;
     }
 
-    .intro p { font-size: 6vw; }
-    h2 { font-size: 7vw; }
-    
+    .intro p { font-size: 5vw; }
+    h2 { font-size: 6vw; }
+
     nav ul {
         flex-direction: column;
         text-align: center;
         background-color: rgb(31, 22, 22);
     }
 
-    nav ul li a { font-size: 1.4em; padding: 12px; }
-    
+    nav ul li a {
+        font-size: 1.4rem; /* Replaced px with rem */
+        padding: 12px;
+    }
+
     .more-info, .events, .contact-section {
         padding: 10px;
         width: 90%;
     }
 }
 
-img { max-width: 100%; height: auto; }
-.navlist { display: flex; list-style: none; padding: 0; }
-.site-title {
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-    letter-spacing: 2px;
+@media (min-width: 1024px) {
+    .GenreButtons {
+        gap: 2rem;
+    }
+
+    .more-info {
+        max-width: 80%;
+        margin: auto;
+    }
 }
-.styled-R { color: greenyellow; font-weight: bold; }
-.styled-R:last-child { color: purple; }
 
-header .logo {
-    width: 80px;
-    height: auto;
-  }
-
-  .logo {
-    max-width: 80px;
-    margin-bottom: 5px;
-  }
-
-  .intro p::first-letter {
-    font-size: 2em;
-    color: pink;
+/* Accessibility Enhancements */
+nav ul li a:focus {
+    outline: 2px solid #3AA4A4;
+    outline-offset: 3px;
 }
