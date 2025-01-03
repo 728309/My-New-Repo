@@ -1,5 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
+Sure! Let's review your CSS for responsiveness and metadata based on the criteria provided in the assessment guide.
 
+### Responsiveness & Metadata Criteria
+
+1. **Sufficient Criteria**:
+   - No use of front-end libraries like Bootstrap.
+   - No use of `br` or `hr` tags.
+   - Use of `charset` attribute.
+   - Use of `author` attribute.
+   - Use of `z-index` for a "cookies" message with value 9999.
+   - Proper indentation with tabs for nested elements.
+   - CSS validated with W3C CSS Validator without errors.
+   - HTML validated with W3C HTML Validator without errors.
+
+2. **Excellent Criteria**:
+   - All sufficient criteria met.
+   - Use of media queries for at least two different devices.
+   - Correct closing tags for all single and paired tags.
+   - Use of `description` attribute with 50–160 characters.
+   - Use of `keywords` attribute with 5 keywords.
+   - Use of `language` attribute.
+   - Use of Flexbox or Grid.
+   - CSS validated with W3C CSS Validator without warnings.
+   - HTML validated with W3C HTML Validator without warnings.
+
+### Review of Your CSS
+
+1. **Media Queries**: You have media queries for devices with a max-width of 768px, which is good.
+   ```css
+   @media (max-width: 768px) {
+       .intro p { font-size: 4vw; }
+       h2 { font-size: 6vw; }
+       nav ul {
+           flex-direction: column;
+           background-color: rgb(31, 22, 22);
+       }
+       nav ul li a {
+           font-size: 23px;
+           padding: 12px;
+       }
+       .more-info,
+       .timetable,
+       .contact-section {
+           padding: 10px;
+           width: 90%;
+       }
+   }
+   ```
+
+2. **Charset Attribute**: Ensure your HTML file includes the charset attribute.
+   ```html
+   <meta charset="UTF-8">
+   ```
+
+3. **Author Attribute**: Include the author attribute in your HTML file.
+   ```html
+   <meta name="author" content="Your Name">
+   ```
+
+4. **Z-index for Cookies Message**: Add a z-index for a "cookies" message.
+   ```css
+   .cookies-message {
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+       background-color: #000;
+       color: #fff;
+       z-index: 9999;
+   }
+   ```
+
+5. **Proper Indentation**: Ensure all nested elements are properly indented with tabs.
+
+6. **Description and Keywords Attributes**: Add these meta tags to your HTML file.
+   ```html
+   <meta name="description" content="A brief description of your website, between 50-160 characters.">
+   <meta name="keywords" content="keyword1, keyword2, keyword3, keyword4, keyword5">
+   ```
+
+7. **Language Attribute**: Include the language attribute in your HTML tag.
+   ```html
+   <html lang="en">
+   ```
+
+8. **Flexbox or Grid**: Use Flexbox or Grid for layout.
+   ```css
+   .flex-container {
+       display: flex;
+       justify-content: space-around;
+   }
+   .grid-container {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+   }
+   ```
+
+9. **Validation**: Validate your CSS and HTML using the W3C validators to ensure there are no errors or warnings.
+
+### Example of Updated HTML
+Here's an example of how you can incorporate these changes into your HTML file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="A brief description of your website, between 50-160 characters.">
+    <meta name="keywords" content="keyword1, keyword2, keyword3, keyword4, keyword5">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Your content here -->
+    <div class="cookies-message">
+        This website uses cookies to ensure you get the best experience.
+    </div>
+</body>
+</html>
+```
+
+### Example of Updated CSS
+Here's an example of how you can incorporate these changes into your CSS file:
+
+```css
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
@@ -16,6 +139,7 @@ header {
     padding: 20px;
     background-color: #000;
     animation: fadeIn 1s ease-in;
+    position: relative; /* Added position property */
 }
 
 header .logo {
@@ -186,82 +310,4 @@ footer {
     h2 { font-size: 6vw; }
 
     nav ul {
-        flex-direction: column;
-        background-color: rgb(31, 22, 22);
-    }
-
-    nav ul li a {
-        font-size: 23px;
-        padding: 12px;
-    }
-    
-    .more-info,
-    .timetable,
-    .contact-section {
-        padding: 10px;
-        width: 90%;
-    }
-}
-
-img { max-width: 100%; height: auto; }
-
-.site-title {
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.styled-R {
-    color: red;
-    font-weight: bold;
-}
-
-.styled-R:last-child {
-    color: rgb(255, 9, 9);
-}
-
-.clubs {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 1rem;
-}
-
-.clubs figure {
-    text-align: center;
-}
-
-.clubs img {
-    width: 150px;
-    height: 100px;
-    border: 3px solid red;
-}
-
-.clubs figcaption {
-    margin-top: 5px;
-    color: red;
-    font-weight: bold;
-}
-
-/* Contact Section */
-.contact-section {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-button:hover {
-    background-color: darkred;
-}
+        flex
