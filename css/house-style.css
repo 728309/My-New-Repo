@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
-/*Styling it self*/
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
     background-image: url("../img/Back ground pic.png");
+    background-size: cover;
     color: white;
     margin: 0;
     padding: 0;
@@ -12,19 +13,19 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: #000;
     animation: fadeIn 1s ease-in;
 }
 
 header .logo {
-    width: 80px;
+    width: 5rem;
     height: auto;
 }
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -33,65 +34,41 @@ nav ul {
 nav ul li a {
     color: white;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     font-family: 'Jersey 25', sans-serif;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-a[href="index.html"]:hover { background-color: #3AA4A4; }
-a[href="House.html"]:hover { background-color: #FF0000; }
-a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
-a[href="Techno.html"]:hover { background-color: #00EA23; }
-a[href="Contact.html"]:hover { background-color: #B966AE; }
+a[href="index.html"]:hover, a[href="House.html"]:hover, a[href="Afrobeat.html"]:hover,
+a[href="Techno.html"]:hover, a[href="Contact.html"]:hover {
+    background-color: #3AA4A4;
+}
 
 main {
     text-align: center;
-    color: white;
-    padding: 20px;
+    padding: 1.25rem;
     animation: fadeIn 1s ease-in;
 }
 
 h2 {
     font-family: 'Jersey 20', sans-serif;
     font-weight: 400;
-    font-size: 60px;
-    margin: 20px 0;
+    font-size: 3.75rem;
+    margin: 1.25rem 0;
     background-color: black;
 }
 
-/* Animations */
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.more-info {
-    margin-top: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.more-info h3 {
-    font-size: 2em;
-    padding: 10px 0;
-}
-
+/* Intro Section */
 .intro {
     background-image: url("../img/version 1.gif");
     background-size: cover;
     background-position: center;
-    padding: 60px 20px;
+    padding: 3.75rem 1.25rem;
     color: white;
-    height: 300px;
+    height: 18.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,94 +77,26 @@ h2 {
 
 .intro p {
     font-family: 'Jersey 25', sans-serif;
-    font-size: 30px;
-    max-width: 800px;
+    font-size: 1.875rem;
+    max-width: 50rem;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
 }
 
-.Bars {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-.Bars::after, .Bars::before {
-    content: '';
-    display: block;
-    height: 10px;
-    background-color: white;
-    margin: 0 auto;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #ddd; /* Improved contrast */
-    background-color: #111;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .intro p { font-size: 5vw; }
-    h2 { font-size: 7vw; }
-
-    nav ul {
-        flex-direction: column;
-        background-color: rgb(31, 22, 22);
-    }
-
-    nav ul li a {
-        font-size: 23px;
-        padding: 12px;
-    }
-    
-    .more-info,
-    .events,
-    .contact-section {
-        padding: 10px;
-        width: 90%;
-    }
-}
-
-img { max-width: 100%; height: auto; }
-
-.navlist {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-.site-title {
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.styled-R {
+.intro p::first-letter {
+    font-size: 2.5rem;
     color: red;
-    font-weight: bold;
 }
 
-.styled-R:last-child {
-    color: rgb(255, 9, 9);
-}
-
+/* Events Section */
 .events {
-    max-width: 300px;
+    max-width: 18.75rem;
     margin: 0 auto;
     background-color: black;
     color: white;
-    padding: 10px;
-    border: 3px solid red;
+    padding: 0.625rem;
+    border: 0.1875rem solid red;
 }
 
 .events ul li:nth-child(odd) { background-color: #222; }
@@ -214,11 +123,12 @@ img { max-width: 100%; height: auto; }
     text-decoration: underline;
 }
 
-/*clubs*/
+/* Clubs Section */
 .clubs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    padding: 1.25rem;
     gap: 1rem;
 }
 
@@ -227,38 +137,72 @@ img { max-width: 100%; height: auto; }
 }
 
 .clubs img {
-    width: 150px;
-    height: 100px;
-    border: 3px solid red;
+    width: 9.375rem;
+    height: 6.25rem;
+    border: 0.1875rem solid red;
 }
 
 .clubs figcaption {
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     color: red;
     font-weight: bold;
 }
 
+/* Contact Section */
 .contact-section {
     background-color: #222;
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
 }
 
 .contact-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 0.625rem;
+    padding: 0.625rem 1.25rem;
     background-color: red;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.contact-button:hover {
+.contact-button:hover, .contact-button:focus {
     background-color: darkred;
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
-.intro p::first-letter {
-    font-size: 2em;
-    color: red;
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ddd;
+    background-color: #111;
+    padding: 0.625rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro p { font-size: 5vw; }
+    h2 { font-size: 7vw; }
+
+    nav ul {
+        flex-direction: column;
+        background-color: rgb(31, 22, 22);
+    }
+
+    nav ul li a {
+        font-size: 1.4375rem;
+        padding: 0.75rem;
+    }
+
+    .more-info,
+    .events,
+    .contact-section {
+        padding: 0.625rem;
+        width: 90%;
+    }
 }

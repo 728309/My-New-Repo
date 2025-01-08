@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Jersey+25&display=swap');
 
-/*th whole website is here*/
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     background-image: url("../img/Back ground pic 2.png");
+    background-size: cover;
     color: white;
     margin: 0;
     padding: 0;
 }
 
-
 header {
     text-align: center;
-    padding: 0;
+    padding: 1.25rem;
     background-color: #000;
     animation: fadeIn 1s ease-in;
 }
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -29,53 +29,49 @@ nav ul {
 nav ul li a {
     color: white;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     font-family: 'Jersey 25', sans-serif;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     background-color: #555;
     transform: scale(1.05);
 }
 
-a[href="index.html"]:hover { background-color: #3AA4A4; }
-a[href="House.html"]:hover { background-color: #FF0000; }
-a[href="Afrobeat.html"]:hover { background-color: #FFE100; }
-a[href="Techno.html"]:hover { background-color: #00EA23; }
-a[href="Contact.html"]:hover { background-color: #B966AE; }
+a[href="index.html"]:hover, a[href="House.html"]:hover, a[href="Afrobeat.html"]:hover,
+a[href="Techno.html"]:hover, a[href="Contact.html"]:hover {
+    background-color: #FFE100;
+}
 
 main {
     text-align: center;
-    color: white; 
-    padding: 20px;
-    animation: fadeIn 1s ease-in; /* Apply fade-in effect */
+    color: white;
+    padding: 1.25rem;
+    animation: fadeIn 1s ease-in;
 }
 
 h2 {
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 50px;
-    margin: 20px 0;
-    background-color: #000000;
+    font-size: 3.125rem;
+    margin: 1.25rem 0;
+    background-color: black;
 }
 
+/* Animations */
 @keyframes pulse {
-    0% {
+    0%, 100% {
         transform: scale(1);
         opacity: 1;
     }
     50% {
         transform: scale(1.1);
         opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
     }
 }
 
@@ -88,261 +84,48 @@ h2 {
     }
 }
 
-.more-info {
-    margin-top: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.more-info h3 {
-    font-size: 25px;
-    color: white;
-    text-align: center;
-    font-size: 2em;
-    padding: 10px 0;
-    position: relative;
-}
-
-.more-info::before {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 2px;
-    background-color: rgb(0, 0, 0);
-    margin: 0 auto 10px auto; 
-}
-
+/* Intro Section */
 .intro {
-    background-image: url("../img/version\ 3.gif");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    padding: 60px 20px; 
+    background-image: url("../img/version 3.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3.75rem 1.25rem;
     text-align: center;
-    color: white; 
-    height: 300px; 
+    color: white;
+    height: 18.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 100%;
-    margin: 0 auto;
 }
 
 .intro p {
     font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 8px;
-    font-size: 30px;
-    max-width: 800px; 
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0); 
-    padding: 15px 30px;
-    border-radius: 5px;
-    margin: 0 auto;
-    display: inline-block;
+    font-size: 1.875rem;
+    max-width: 50rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.9375rem 1.875rem;
+    border-radius: 0.3125rem;
 }
 
-@media (max-width: 768px){
-
-    .intro p{
-        font-size: 4vw;
-    }
-
-    h2{
-        font-size: 6vw;
-        margin: 10px 0;
-        padding: 15px;
-        width: 100%;
-    }
-
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: rgb(31, 22, 22);
-    }
-
-    nav ul li a {
-        font-size: 23px;
-        padding: 12px;
-    }
-
-    ..navlist { display: flex; list-style: none; padding: 0; }
-
-    .nav-list li {
-        margin: 10px 0; 
-    }
-
-    .menu-toggle {
-        display: none; 
-    }
-
-    .menu-icon {
-        display: flex; 
-    }
-
-    #menu-toggle:checked + .menu-icon + .nav-list {
-        display: flex; 
-    }
+.intro p::first-letter {
+    font-size: 2rem;
+    color: yellow;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
-    text-align: left;
-    display: flex;
-    justify-content: left;
-    align-items:flex-start;
-    gap: 20px;
-}
-
-.navlist{
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.menu-icon {
-    display: none; 
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    height: 3px;
-    width: 25px;
-    background-color: black;
-    margin: 3px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    font-family: 'Jersey 25', sans-serif;
-}
-
-article p {
-    font-family: 'Jersey 25', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 5px;
-    font-size: 25px;
-}
-
-
-.logo {
-    max-width: 80px;
-    margin-bottom: 5px; 
-}
-
-.site-title {
-    font-size: 3em; 
-    font-weight: bold;
-    text-align: center;
-    color: white; 
-    margin: 0;
-    letter-spacing: 2px; 
-    padding-top: 10px;
-}
-
-.styled-R {
-    color: rgb(255, 255, 0);
-    font-weight: bold;
-}
-
-.styled-R:last-child {
-    color: rgb(255, 255, 0);
-}
-
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #999; 
-    background-color: #111; 
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    padding: 0;
-    letter-spacing: 1px;
-    font-weight: 300;
-    color: #ccc;
-}
-
-footer p::before, footer p::after {
-    content: " ";
-    display: inline-block;
-    margin: 0 5px;
-    width: 30px;
-    border-top: 1px solid #999; 
-}
-
-figcaption {
-    color: black;
-}
-
-@supports (display: grid) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.box {
-    width: 300px;
-    height: 300px;
-    background-color: yellow;
-    border-radius: 20px; 
-}
-
-.red-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.red-banner span, .red-banner h2 {
-    background-color: yellow;
-    padding: 5px;
-}
-
-.red-banner h2 {
-    font-size: 2.5rem;
-    color: rgb(0, 0, 0);
-}
-
+/* Events Section */
 .events {
-    max-width: 300px; 
+    max-width: 18.75rem;
     margin: 0 auto;
     background-color: black;
     color: white;
-    padding: 10px;
-    border: 3px solid yellow;
+    padding: 0.625rem;
+    border: 0.1875rem solid yellow;
 }
+
+.events ul li:nth-child(odd) { background-color: #222; }
+.events ul li:nth-child(even) { background-color: #333; }
 
 .events h3 {
     color: yellow;
@@ -352,7 +135,7 @@ figcaption {
 
 .events ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
 
 .events ul li a {
@@ -360,20 +143,18 @@ figcaption {
     text-decoration: none;
 }
 
-.events ul li:nth-child(odd) { background-color: #222; }
-.events ul li:nth-child(even) { background-color: #333; }
-
 .events ul li a:hover {
     color: yellow;
     text-decoration: underline;
 }
 
+/* Clubs Section */
 .clubs {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    padding: 1.25rem;
     gap: 1rem;
-    flex-direction: row;
 }
 
 .clubs figure {
@@ -381,43 +162,72 @@ figcaption {
 }
 
 .clubs img {
-    width: 150px;
-    height: 100px;
-    border: 3px solid yellow;
+    width: 9.375rem;
+    height: 6.25rem;
+    border: 0.1875rem solid yellow;
 }
 
 .clubs figcaption {
-    margin-top: 5px;
-    color: rgb(255, 255, 0);
-    text-align: center;
+    margin-top: 0.3125rem;
+    color: yellow;
     font-weight: bold;
 }
 
+/* Contact Section */
 .contact-section {
     background-color: #222;
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
-}
-
-.contact-section p {
-    font-size: 1rem;
 }
 
 .contact-button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
+    margin-top: 0.625rem;
+    padding: 0.625rem 1.25rem;
     background-color: yellow;
-    color: rgb(0, 0, 0);
+    color: black;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.contact-button:hover {
+.contact-button:hover, .contact-button:focus {
     background-color: rgb(146, 156, 2);
+    outline: 2px solid black;
+    outline-offset: 2px;
 }
 
-.intro p::first-letter {
-    font-size: 2em;
-    color: yellow;
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ccc;
+    background-color: #111;
+    padding: 0.625rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro p {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+        margin: 0.625rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: rgb(31, 22, 22);
+    }
+
+    nav ul li a {
+        font-size: 1.4375rem;
+        padding: 0.75rem;
+    }
 }
