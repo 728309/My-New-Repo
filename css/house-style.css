@@ -31,7 +31,7 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+nav > ul > li > a {
     color: white;
     text-transform: uppercase;
     font-size: 1.875rem;
@@ -42,15 +42,24 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
+nav > ul > li > a:visited {
+    color: #e7aeae; 
+    font-style: italic; 
+}
+
 a[href="index.html"]:hover, a[href="House.html"]:hover, a[href="Afrobeat.html"]:hover,
 a[href="Techno.html"]:hover, a[href="Contact.html"]:hover {
-    background-color: #3AA4A4;
+    background-color: #db1111;
 }
 
 main {
     text-align: center;
     padding: 1.25rem;
     animation: fadeIn 1s ease-in;
+}
+
+main p {
+    text-indent: 2rem;
 }
 
 h2 {
@@ -73,6 +82,17 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-width: 5px; /* Added */
+    border-style: solid; /* Added */
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.intro img {
+    float: left; 
+    margin-right: 1rem; 
+    width: 150px; 
+    height: auto;
+    border: 2px solid white;
 }
 
 .intro p {
@@ -82,6 +102,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.625rem 1.25rem;
     border-radius: 0.3125rem;
+    overflow: visible;
 }
 
 .intro p::first-letter {
@@ -96,29 +117,31 @@ h2 {
     background-color: black;
     color: white;
     padding: 0.625rem;
-    border: 0.1875rem solid red;
+    border-width: 3px;
+    border-style: solid; /* Explicitly added */
+    border-color: red;  
 }
 
 .events ul li:nth-child(odd) { background-color: #222; }
 .events ul li:nth-child(even) { background-color: #333; }
 
-.events h3 {
+.events > h3 {
     color: red;
     font-size: 1.2rem;
     margin-top: 0;
 }
 
-.events ul {
+.events > ul {
     list-style: none;
     padding: 0;
 }
 
-.events ul li a {
+.events > ul > li > a {
     color: white;
     text-decoration: none;
 }
 
-.events ul li a:hover {
+.events > ul > li > a:hover {
     color: red;
     text-decoration: underline;
 }
@@ -132,17 +155,25 @@ h2 {
     gap: 1rem;
 }
 
-.clubs figure {
+.clubs > figure {
+    width: 12rem;
     text-align: center;
 }
 
-.clubs img {
-    width: 9.375rem;
-    height: 6.25rem;
-    border: 0.1875rem solid red;
+.clubs > figure > img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid rgb(255, 0, 0);
+    box-sizing: border-box;
 }
 
-.clubs figcaption {
+.clubs::after {
+    content: ""; 
+    display: table;
+    clear: both;
+}
+
+.clubs > figure > figcaption {
     margin-top: 0.3125rem;
     color: red;
     font-weight: bold;
@@ -164,6 +195,9 @@ h2 {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    border-width: 2px; /* Added */
+    border-style: solid; /* Added */
+    border-color: white; /* Added */
 }
 
 .contact-button:hover, .contact-button:focus {
@@ -204,5 +238,19 @@ footer {
     .contact-section {
         padding: 0.625rem;
         width: 90%;
+    }
+
+    .clubs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clubs > figure {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .clubs > figure > img {
+        width: 100%;
     }
 }

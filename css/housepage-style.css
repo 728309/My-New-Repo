@@ -32,7 +32,7 @@ nav ul {
     padding: 0;
 }
 
-nav ul li a {
+nav > ul > li > a {
     color: white;
     text-transform: uppercase;
     font-size: 1.875rem;
@@ -41,6 +41,11 @@ nav ul li a {
     font-family: 'Jersey 25', sans-serif;
     font-weight: bold;
     transition: background-color 0.3s ease;
+}
+
+nav > ul > li > a:visited {
+    color: #e7aeae; 
+    font-style: italic; 
 }
 
 nav ul li a:hover, nav ul li a:focus {
@@ -56,9 +61,13 @@ a[href="Contact.html"]:hover, a[href="Contact.html"]:focus { background-color: #
 /* Main */
 main {
     text-align: center;
-    color: white;
+    color: rgb(255, 0, 0);
     padding: 1.25rem;
     animation: fadeIn 1s ease-in;
+}
+
+main p {
+    text-indent: 2rem;
 }
 
 h2 {
@@ -86,6 +95,9 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .intro p {
@@ -95,6 +107,15 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.625rem 1.25rem;
     border-radius: 0.3125rem;
+    overflow: visible;
+}
+
+.intro img {
+    float: left; 
+    margin-right: 1rem; 
+    width: 150px; 
+    height: auto;
+    border: 2px solid white;
 }
 
 /* Gallery */
@@ -138,12 +159,22 @@ h2 {
 .timetable-table {
     margin: 0 auto;
     border-collapse: collapse;
+    background-color: #FFF; 
+    width: 100%;
 }
 
 .timetable-table th, .timetable-table td {
-    border: 1px solid red;
+    border: 1px solid #ff0000;
     padding: 0.5rem;
     text-align: center;
+}
+
+.timetable-table tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+.timetable-table tr:nth-child(even) {
+    background-color: #CFF;
 }
 
 /* Social Media */
