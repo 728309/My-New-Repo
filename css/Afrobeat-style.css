@@ -13,7 +13,7 @@ body {
 
 header {
     text-align: center;
-    padding: 1.25rem;
+    padding: 1.25em;
     background-color: #000;
     animation: fadeIn 1s ease-in;
 }
@@ -61,7 +61,7 @@ main {
 }
 
 main p {
-    text-indent: 2rem;
+    text-indent: 2em;
 }
 
 h2 {

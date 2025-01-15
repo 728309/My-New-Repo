@@ -89,7 +89,7 @@ h2 {
 
 .intro img {
     float: left; 
-    margin-right: 1rem; 
+    margin-right: 1em; 
     width: 150px; 
     height: auto;
     border: 2px solid white;
